@@ -1,7 +1,7 @@
 extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D =  $AnimatedSprite2D
 const SPEED = 130.0
-const JUMP_VELOCITY = -343.0
+const JUMP_VELOCITY = -550.0
 
 #get gravity from project settings to be synced with RigidBody Node
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")

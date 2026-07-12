@@ -9,9 +9,9 @@
 position = Vector2(172, 589)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-0.9999988, -5.3333335)
-zoom = Vector2(4, 4)
+position = Vector2(0.4000011, -12.400007)
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 
 [node name="Level Root" parent="." instance=ExtResource("2_qxrlw")]
-position = Vector2(-9, -15)
+position = Vector2(-14, -15)
