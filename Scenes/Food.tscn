@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://jwln2o06rw6u"]
+
+[ext_resource type="Texture2D" uid="uid://b2ot10axhd3ub" path="res://Assets/sprites/carrot.png" id="1_jg7ha"]
+[ext_resource type="Script" uid="uid://gj3ucur2xl3k" path="res://Scripts/food.gd" id="1_qly5w"]
+[ext_resource type="AudioStream" uid="uid://k5s455vsjtai" path="res://Assets/sounds/coin.wav" id="3_k1agc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qly5w"]
+atlas = ExtResource("1_jg7ha")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1agc"]
+atlas = ExtResource("1_jg7ha")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfwcl"]
+atlas = ExtResource("1_jg7ha")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v04v2"]
+atlas = ExtResource("1_jg7ha")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_myqy7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qly5w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1agc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfwcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v04v2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ow8t"]
+size = Vector2(12, 26)
+
+[node name="Food" type="Area2D"]
+scale = Vector2(2, 2)
+collision_mask = 2
+script = ExtResource("1_qly5w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_myqy7")
+autoplay = "default"
+frame_progress = 0.56726134
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_3ow8t")
+
+[node name="CollectedSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k1agc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
