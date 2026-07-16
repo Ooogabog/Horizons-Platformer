@@ -1,8 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://jwln2o06rw6u"]
+[gd_scene load_steps=9 format=3 uid="uid://jwln2o06rw6u"]
 
 [ext_resource type="Texture2D" uid="uid://b2ot10axhd3ub" path="res://Assets/sprites/carrot.png" id="1_jg7ha"]
 [ext_resource type="Script" uid="uid://gj3ucur2xl3k" path="res://Scripts/food.gd" id="1_qly5w"]
-[ext_resource type="AudioStream" uid="uid://k5s455vsjtai" path="res://Assets/sounds/coin.wav" id="3_k1agc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qly5w"]
 atlas = ExtResource("1_jg7ha")
@@ -51,13 +50,11 @@ script = ExtResource("1_qly5w")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_myqy7")
 autoplay = "default"
-frame_progress = 0.56726134
+frame = 2
+frame_progress = 0.84810984
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_3ow8t")
-
-[node name="CollectedSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_k1agc")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

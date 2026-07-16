@@ -22,8 +22,11 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
-	#Get input direction and handle the movement/ deceleration
+	#Get input direction: -1 , 0 , 1
 	var direction = Input.get_axis("left", "right")
+		
+	
+	#Apply movement 
 	if direction:
 		velocity.x = direction * SPEED
 	else:
@@ -35,6 +38,6 @@ func _physics_process(delta):
 	if direction== -1.0:
 		animated_sprite_2d.flip_h = true
 	else:
-		animated_sprite_2d.flip_h = false
+		animated_sprite_2d.flip_h = false 
 		
 		
