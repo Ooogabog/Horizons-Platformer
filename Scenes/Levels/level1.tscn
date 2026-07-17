@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://0c70h06o2lks"]
+[gd_scene load_steps=31 format=4 uid="uid://0c70h06o2lks"]
 
 [ext_resource type="Texture2D" uid="uid://bg5dchc7ativq" path="res://Assets/sprites/Mossy - TileSet.png" id="1_4hvuo"]
 [ext_resource type="Texture2D" uid="uid://cb4clp7ehmcfb" path="res://Assets/sprites/Background 1.png" id="1_4iphx"]
@@ -358,9 +358,6 @@ _data = {
 &"move": SubResource("Animation_rqhku")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1b78"]
-size = Vector2(66, 91)
-
 [node name="LevelRoot" type="Node2D"]
 script = ExtResource("1_u1b78")
 
@@ -466,14 +463,5 @@ theme_override_fonts/font = ExtResource("12_cpkqv")
 theme_override_font_sizes/font_size = 16
 text = "Uncharted Territory: Escape!!"
 
-[node name="Exit" type="Area2D" parent="."]
-position = Vector2(1271, 281)
-collision_mask = 2
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(-1, -5.5)
-shape = SubResource("RectangleShape2D_u1b78")
-
 [node name="Exit Level" parent="." groups=["Player"] instance=ExtResource("15_ryjqc")]
-position = Vector2(1095, 246)
+position = Vector2(1245, 233)

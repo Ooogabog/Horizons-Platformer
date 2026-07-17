@@ -14,10 +14,6 @@ func _process(_delta: float) -> void:
 	pass
 	
 func _setup_level() -> void:
-	#Connect Exit
-	var exit = $LevelRoot.get_node_or_null("Exit")
-	if exit:
-		exit.body_entered.connect(_on_exit_body_entered)
 	   
 	
 	#connect food
@@ -34,9 +30,4 @@ func add_point():
 	score += 1
 	score_label.text = " You Collected "+ str(score)+ " carrots "
 	
-#exit Handler
-func _on_exit_body_entered(body: Node2D) -> void:
-	if body.name == "Player":
-		print(body)
-		print(level)
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://dmwwlsdw5sct5"]
+[gd_scene load_steps=31 format=4 uid="uid://dmwwlsdw5sct5"]
 
 [ext_resource type="Script" uid="uid://ck5eq28eg0lxc" path="res://Scripts/level_1.gd" id="1_du1gc"]
 [ext_resource type="Texture2D" uid="uid://cb4clp7ehmcfb" path="res://Assets/sprites/Background 1.png" id="2_uwisk"]
@@ -358,9 +358,6 @@ _data = {
 &"move": SubResource("Animation_rqhku")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u1b78"]
-size = Vector2(66, 91)
-
 [node name="LevelRoot" type="Node2D"]
 script = ExtResource("1_du1gc")
 
@@ -465,15 +462,6 @@ theme_override_colors/font_color = Color(1, 0.45, 0.45, 1)
 theme_override_fonts/font = ExtResource("14_kbn7v")
 theme_override_font_sizes/font_size = 16
 text = "Uncharted Territory: Escape!!"
-
-[node name="Exit" type="Area2D" parent="."]
-position = Vector2(1271, 281)
-collision_mask = 2
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
-position = Vector2(-1, -5.5)
-shape = SubResource("RectangleShape2D_u1b78")
 
 [node name="Exit Level" parent="." groups=["Player"] instance=ExtResource("15_laeu0")]
 position = Vector2(1095, 246)
