@@ -28,6 +28,7 @@ func _setup_level() -> void:
 # score handler
 func add_point():
 	score += 1
+	print(score)
 	score_label.text = " You Collected "+ str(score)+ " carrots "
 	
 	

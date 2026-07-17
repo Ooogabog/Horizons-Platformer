@@ -5,7 +5,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_anqd2"]
 size = Vector2(294.9995, 50.949005)
 
-[node name="MovingPlatform" type="AnimatableBody2D"]
+[node name="MovingPlatformSide" type="AnimatableBody2D"]
+collision_mask = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.15, 0.15)

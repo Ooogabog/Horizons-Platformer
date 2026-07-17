@@ -1,6 +1,6 @@
-[gd_scene load_steps=32 format=4 uid="uid://bs7gxvnb4jgfm"]
+[gd_scene load_steps=36 format=4 uid="uid://bs7gxvnb4jgfm"]
 
-[ext_resource type="Script" uid="uid://ck5eq28eg0lxc" path="res://Scripts/level_1.gd" id="1_0jhw5"]
+[ext_resource type="Script" uid="uid://defcvp2w6onq3" path="res://Scripts/level_2.gd" id="1_hpjhc"]
 [ext_resource type="Texture2D" uid="uid://cb4clp7ehmcfb" path="res://Assets/sprites/Background 1.png" id="2_eqosv"]
 [ext_resource type="Texture2D" uid="uid://bg5dchc7ativq" path="res://Assets/sprites/Mossy - TileSet.png" id="3_6a7cf"]
 [ext_resource type="Texture2D" uid="uid://bilorlycre7wu" path="res://Assets/sprites/Mossy - Decorations&Hazards.png" id="4_hpjhc"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://fxvkt8ib0rhd" path="res://Scenes/moving_platform.tscn" id="13_keokt"]
 [ext_resource type="FontFile" uid="uid://bae47tvofuu8o" path="res://Assets/fonts/PixelOperator8.ttf" id="14_cvw5d"]
 [ext_resource type="PackedScene" uid="uid://wy7teto5idtf" path="res://Scenes/exit_level.tscn" id="15_eqosv"]
+[ext_resource type="PackedScene" uid="uid://cf2n0hcpg4uky" path="res://Scenes/moving_platform_up.tscn" id="17_hpjhc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1b78"]
 texture = ExtResource("2_eqosv")
@@ -359,8 +360,46 @@ _data = {
 &"move": SubResource("Animation_rqhku")
 }
 
-[node name="LevelRoot" type="Node2D"]
-script = ExtResource("1_0jhw5")
+[sub_resource type="Animation" id="Animation_56d2c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(482, 560)]
+}
+
+[sub_resource type="Animation" id="Animation_hpjhc"]
+resource_name = "up"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(482, 560), Vector2(482, 375)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jywle"]
+_data = {
+&"RESET": SubResource("Animation_56d2c"),
+&"up": SubResource("Animation_hpjhc")
+}
+
+[node name="LevelRoot2" type="Node2D"]
+script = ExtResource("1_hpjhc")
 
 [node name="World2" type="Node" parent="."]
 
@@ -373,7 +412,7 @@ collision_enabled = false
 [node name="platforms" type="TileMapLayer" parent="World2"]
 position = Vector2(5, -1)
 scale = Vector2(0.14999999, 0.14999999)
-tile_map_data = PackedByteArray("AAAKAAkAAAABAAAAAAALAAkAAAABAAAAAAAMAAkAAAABAAAAAAANAAkAAAABAAAAAAAOAAkAAAABAAAAAAAPAAkAAAABAAAAAAAQAAEAAAAAAAEAAAAQAAkAAAABAAUAAAAPAAAAAAABAAIAAAAOAAAAAAABAAIAAAANAAAAAAABAAIAAAAMAAAAAAABAAIAAAALAAAAAAABAAIAAAAKAAAAAAABAAIAAAAJAAAAAAABAAIAAAAIAAAAAAABAAIAAAAHAAAAAAABAAIAAAAGAAAAAAABAAIAAAAFAAAAAAABAAIAAAAEAAAAAAABAAIAAAADAAAAAAABAAIAAAACAAAAAAABAAIAAAABAAAAAAABAAIAAAAEAAkAAAABAAAAAAAPAAQAAAABAAMAAAAOAAQAAAABAAMAAAANAAQAAAAAAAMAAAD//wAAAAABAAIAAAD/////AAABAAEAAAAAAP//AAABAAEAAAABAP//AAABAAEAAAACAP//AAABAAEAAAADAP//AAABAAEAAAAEAP//AAABAAEAAAAFAP//AAABAAEAAAAGAP//AAABAAEAAAAHAP//AAABAAEAAAAIAP//AAABAAEAAAAJAP//AAABAAEAAAAKAP//AAABAAEAAAALAP//AAABAAEAAAAMAP//AAABAAEAAAANAP//AAABAAEAAAAOAP//AAABAAEAAAAPAP//AAABAAEAAAAQAP//AAABAAEAAAAQAAAAAAABAAEAAAAQAAYAAAAAAAEAAAAQAAcAAAAAAAEAAAAQAAgAAAAAAAEAAAAAAAAAAAABAAIAAAD+/wEAAAACAAEAAAD+/wIAAAACAAEAAAD+/wMAAAACAAEAAAD+/wQAAAACAAEAAAD+/wUAAAACAAEAAAD+/wYAAAACAAEAAAD+/wcAAAACAAEAAAD+/wgAAAAAAAUAAAD+/wAAAAAAAAQAAAD+/wkAAAABAAEAAAAQAAIAAAAAAAIAAAAQAAQAAAAGAAQAAAARAAIAAAABAAIAAAASAAIAAAABAAIAAAAQAAUAAAABAAMAAGADAAkAAAABAAAAAAACAAkAAAABAAAAAAABAAkAAAABAAAAAAAAAAkAAAABAAAAAAD//wkAAAABAAAAAAAGAAYAAAABAAMAAAAHAAYAAAABAAMAAAAIAAYAAAABAAMAAAAJAAYAAAACAAMAAAAFAAYAAAABAAMAAAAEAAYAAAAAAAMAAAACAAUAAAADAAMAAAAGAAoAAAABAAEAAAAFAAkAAAABAAAAAAAGAAkAAAABAAAAAAAJAAkAAAABAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAACAAAAAAAHAAkAAAABAAEAAAAIAAkAAAABAAEAAAABAAcAAAADAAMAAAA=")
+tile_map_data = PackedByteArray("AAAKAAkAAAABAAAAAAALAAkAAAABAAAAAAAMAAkAAAABAAAAAAANAAkAAAABAAAAAAAOAAkAAAABAAAAAAAPAAkAAAABAAAAAAAQAAEAAAAAAAEAAAAQAAkAAAABAAUAAAAPAAAAAAABAAIAAAAOAAAAAAABAAIAAAANAAAAAAABAAIAAAAMAAAAAAABAAIAAAALAAAAAAABAAIAAAAKAAAAAAABAAIAAAAJAAAAAAABAAIAAAAIAAAAAAABAAIAAAAHAAAAAAABAAIAAAAGAAAAAAABAAIAAAAFAAAAAAABAAIAAAAEAAAAAAABAAIAAAADAAAAAAABAAIAAAACAAAAAAABAAIAAAABAAAAAAABAAIAAAAEAAkAAAABAAAAAAAPAAQAAAABAAMAAAAOAAQAAAABAAMAAAANAAQAAAAAAAMAAAD//wAAAAABAAIAAAD/////AAABAAEAAAAAAP//AAABAAEAAAABAP//AAABAAEAAAACAP//AAABAAEAAAADAP//AAABAAEAAAAEAP//AAABAAEAAAAFAP//AAABAAEAAAAGAP//AAABAAEAAAAHAP//AAABAAEAAAAIAP//AAABAAEAAAAJAP//AAABAAEAAAAKAP//AAABAAEAAAALAP//AAABAAEAAAAMAP//AAABAAEAAAANAP//AAABAAEAAAAOAP//AAABAAEAAAAPAP//AAABAAEAAAAQAP//AAABAAEAAAAQAAAAAAABAAEAAAAQAAYAAAAAAAEAAAAQAAcAAAAAAAEAAAAQAAgAAAAAAAEAAAAAAAAAAAABAAIAAAD+/wEAAAACAAEAAAD+/wIAAAACAAEAAAD+/wMAAAACAAEAAAD+/wQAAAACAAEAAAD+/wUAAAACAAEAAAD+/wYAAAACAAEAAAD+/wcAAAACAAEAAAD+/wgAAAAAAAUAAAD+/wAAAAAAAAQAAAD+/wkAAAABAAEAAAAQAAIAAAAAAAIAAAAQAAQAAAAGAAQAAAARAAIAAAABAAIAAAASAAIAAAABAAIAAAAQAAUAAAABAAMAAGADAAkAAAABAAAAAAACAAkAAAABAAAAAAABAAkAAAABAAAAAAAAAAkAAAABAAAAAAD//wkAAAABAAAAAAACAAUAAAADAAMAAAAGAAoAAAABAAEAAAAFAAkAAAABAAAAAAAGAAkAAAABAAAAAAAJAAkAAAABAAAAAAAHAAgAAAAAAAAAAAAIAAgAAAACAAAAAAAHAAkAAAABAAEAAAAIAAkAAAABAAEAAAABAAcAAAADAAMAAAA=")
 tile_set = SubResource("TileSet_c5erv")
 
 [node name="plants" type="TileMapLayer" parent="World2"]
@@ -391,19 +430,19 @@ script = ExtResource("9_jydn8")
 [node name="Food" type="Node" parent="."]
 
 [node name="Food" parent="Food" instance=ExtResource("10_pwvbg")]
-position = Vector2(530, 438)
+position = Vector2(473, 492)
 
 [node name="Food2" parent="Food" instance=ExtResource("10_pwvbg")]
-position = Vector2(593, 439)
+position = Vector2(579, 493)
 
 [node name="Food3" parent="Food" instance=ExtResource("10_pwvbg")]
-position = Vector2(668, 443)
+position = Vector2(124, 519)
 
 [node name="Food4" parent="Food" instance=ExtResource("10_pwvbg")]
 position = Vector2(1005, 443)
 
 [node name="Food5" parent="Food" instance=ExtResource("10_pwvbg")]
-position = Vector2(888, 212)
+position = Vector2(198, 369)
 
 [node name="Food6" parent="Food" instance=ExtResource("10_pwvbg")]
 position = Vector2(1139, 290)
@@ -421,10 +460,10 @@ position = Vector2(63, 641)
 position = Vector2(327, -43)
 shape = SubResource("WorldBoundaryShape2D_rqhku")
 
-[node name="MovingPlatform" parent="." instance=ExtResource("13_keokt")]
+[node name="MovingPlatformSide" parent="." instance=ExtResource("13_keokt")]
 position = Vector2(1047, 504)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatform"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatformSide"]
 libraries = {
 &"": SubResource("AnimationLibrary_d1mwp")
 }
@@ -433,41 +472,41 @@ autoplay = "move"
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label2" type="Label" parent="Labels"]
-offset_left = 687.0
-offset_top = 415.0
-offset_right = 1027.0
-offset_bottom = 478.0
+offset_left = 97.0
+offset_top = 603.0
+offset_right = 437.0
+offset_bottom = 666.0
 theme_override_colors/font_color = Color(1, 0.61960787, 1, 1)
 theme_override_fonts/font = ExtResource("14_cvw5d")
 theme_override_font_sizes/font_size = 16
-text = "Make sure to jump 
-at the right time"
+text = "The Monsters are a Reflection of Your Doubts. Don't let them Consume You"
+autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="Labels"]
-offset_left = 1035.0
-offset_top = 245.0
-offset_right = 1215.0
-offset_bottom = 310.0
+offset_left = 1058.0
+offset_top = 226.0
+offset_right = 1238.0
+offset_bottom = 291.0
 theme_override_colors/font_color = Color(1, 0.78039217, 1, 1)
 theme_override_fonts/font = ExtResource("14_cvw5d")
 theme_override_font_sizes/font_size = 16
-text = "Almost There.."
-
-[node name="Label4" type="Label" parent="Labels"]
-offset_left = 813.0
-offset_top = 606.0
-offset_right = 1187.0
-offset_bottom = 661.0
-theme_override_colors/font_color = Color(1, 0.45, 0.45, 1)
-theme_override_fonts/font = ExtResource("14_cvw5d")
-theme_override_font_sizes/font_size = 16
-text = "Uncharted Territory: Escape!!"
+text = "Whew! wasn't that hard"
+autowrap_mode = 2
 
 [node name="Exit Level" parent="." groups=["Player"] instance=ExtResource("15_eqosv")]
-position = Vector2(1088, 244)
+position = Vector2(1231, 246)
 
 [node name="Enemy" parent="." instance=ExtResource("10_6a7cf")]
 position = Vector2(798, 650)
 
 [node name="Enemy2" parent="." instance=ExtResource("10_6a7cf")]
-position = Vector2(306, 649)
+position = Vector2(299, 650)
+
+[node name="MovingPlatformUp" parent="." instance=ExtResource("17_hpjhc")]
+position = Vector2(482, 560)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatformUp"]
+libraries = {
+&"": SubResource("AnimationLibrary_jywle")
+}
+autoplay = "up"

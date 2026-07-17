@@ -358,7 +358,7 @@ _data = {
 &"move": SubResource("Animation_rqhku")
 }
 
-[node name="LevelRoot" type="Node2D"]
+[node name="LevelRoot1" type="Node2D"]
 script = ExtResource("1_u1b78")
 
 [node name="World" type="Node" parent="."]
@@ -421,10 +421,10 @@ position = Vector2(164.00002, 616.00006)
 position = Vector2(327, -43)
 shape = SubResource("WorldBoundaryShape2D_rqhku")
 
-[node name="MovingPlatform" parent="." instance=ExtResource("11_rqhku")]
+[node name="MovingPlatformSide" parent="." instance=ExtResource("11_rqhku")]
 position = Vector2(1047, 504)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatform"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatformSide"]
 libraries = {
 &"": SubResource("AnimationLibrary_d1mwp")
 }
@@ -463,5 +463,17 @@ theme_override_fonts/font = ExtResource("12_cpkqv")
 theme_override_font_sizes/font_size = 16
 text = "Uncharted Territory: Escape!!"
 
+[node name="Score Label" type="Label" parent="Labels"]
+offset_left = 984.0
+offset_top = 190.0
+offset_right = 1247.0
+offset_bottom = 251.0
+theme_override_colors/font_color = Color(1, 0.77254903, 1, 1)
+theme_override_fonts/font = ExtResource("12_cpkqv")
+theme_override_font_sizes/font_size = 16
+text = "You Collected x Carrots"
+horizontal_alignment = 1
+autowrap_mode = 2
+
 [node name="Exit Level" parent="." groups=["Player"] instance=ExtResource("15_ryjqc")]
-position = Vector2(1245, 233)
+position = Vector2(1229, 244)
