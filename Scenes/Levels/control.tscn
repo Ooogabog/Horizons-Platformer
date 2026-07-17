@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkn4agm5enlka"]
+
+[ext_resource type="Script" uid="uid://s6mj7huwv05h" path="res://Scenes/Levels/control.gd" id="1_223bv"]
+[ext_resource type="Texture2D" uid="uid://cjeh44b51j6b8" path="res://Assets/sprites/last of us.jpeg" id="2_42htr"]
+[ext_resource type="FontFile" uid="uid://c3akkpnkk7ix8" path="res://Assets/fonts/lemonade.ttf" id="3_i43kg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jc82h"]
+texture = ExtResource("2_42htr")
+modulate_color = Color(0.51718444, 0.5171845, 0.51718444, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u3b8p"]
+bg_color = Color(0.98039216, 0.9764706, 0.92156863, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0.059583403, 0.050163925, 0.042084895, 0.6)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6cee0"]
+bg_color = Color(0.98039216, 0.9764706, 0.92156863, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_223bv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jc82h")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -154.0
+offset_top = -123.0
+offset_right = 154.0
+offset_bottom = -51.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.021434566, 0.021434668, 0.021434598, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_u3b8p")
+text = "Close"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.5
+offset_top = -311.0
+offset_right = 315.0
+offset_bottom = 166.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.04755766, 0.047557645, 0.047557645, 1)
+theme_override_fonts/font = ExtResource("3_i43kg")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_6cee0")
+text = " 
+ Jump:
+> Space or Up or W
+ 
+ Move Right:
+>Right or D
+
+ Move Left:
+>Left or A"
+
+[connection signal="pressed" from="Button" to="." method="_on_close_button_pressed"]
