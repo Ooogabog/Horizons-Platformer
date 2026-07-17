@@ -433,15 +433,18 @@ autoplay = "move"
 [node name="Labels" type="Node" parent="."]
 
 [node name="Label2" type="Label" parent="Labels"]
-offset_left = 687.0
-offset_top = 415.0
-offset_right = 1027.0
-offset_bottom = 478.0
+offset_left = 586.0
+offset_top = 358.0
+offset_right = 926.0
+offset_bottom = 421.0
 theme_override_colors/font_color = Color(1, 0.61960787, 1, 1)
 theme_override_fonts/font = ExtResource("12_cpkqv")
 theme_override_font_sizes/font_size = 16
-text = "Make sure to jump 
-at the right time"
+text = "Trust Your Gut, 
+Jump!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Label3" type="Label" parent="Labels"]
 offset_left = 1035.0
