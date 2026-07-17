@@ -1,23 +1,23 @@
-[gd_scene load_steps=32 format=4 uid="uid://0c70h06o2lks"]
+[gd_scene load_steps=32 format=4 uid="uid://dmwwlsdw5sct5"]
 
-[ext_resource type="Texture2D" uid="uid://bg5dchc7ativq" path="res://Assets/sprites/Mossy - TileSet.png" id="1_4hvuo"]
-[ext_resource type="Texture2D" uid="uid://cb4clp7ehmcfb" path="res://Assets/sprites/Background 1.png" id="1_4iphx"]
-[ext_resource type="Script" uid="uid://cyb78xm48tqk" path="res://Scripts/game_manager.gd" id="1_d1mwp"]
-[ext_resource type="Script" uid="uid://ck5eq28eg0lxc" path="res://Scripts/level_1.gd" id="1_u1b78"]
-[ext_resource type="PackedScene" uid="uid://bkfb5sq8wmpy0" path="res://Scenes/player.tscn" id="2_16p8j"]
-[ext_resource type="Texture2D" uid="uid://bilorlycre7wu" path="res://Assets/sprites/Mossy - Decorations&Hazards.png" id="2_y4dr7"]
-[ext_resource type="Texture2D" uid="uid://boc8rfrcdrfp3" path="res://Assets/sprites/Mossy - Hanging Plants.png" id="3_didp7"]
-[ext_resource type="Texture2D" uid="uid://c2rg3fae6grxe" path="res://Assets/sprites/SlimeOrange_00000.png" id="4_2a60c"]
-[ext_resource type="Texture2D" uid="uid://mkteoh078niy" path="res://Assets/sprites/BlueFlower_00000.png" id="4_didp7"]
-[ext_resource type="Texture2D" uid="uid://c5lecw0rs7ptl" path="res://Assets/sprites/Square - Black.jpg" id="4_jgkgd"]
-[ext_resource type="PackedScene" uid="uid://jwln2o06rw6u" path="res://Scenes/Food.tscn" id="8_4iphx"]
-[ext_resource type="PackedScene" uid="uid://b6s568ie86uxe" path="res://Scenes/kill_zone.tscn" id="10_bs12r"]
-[ext_resource type="PackedScene" uid="uid://fxvkt8ib0rhd" path="res://Scenes/moving_platform.tscn" id="11_rqhku"]
-[ext_resource type="FontFile" uid="uid://bae47tvofuu8o" path="res://Assets/fonts/PixelOperator8.ttf" id="12_cpkqv"]
-[ext_resource type="PackedScene" uid="uid://wy7teto5idtf" path="res://Scenes/exit_level.tscn" id="15_ryjqc"]
+[ext_resource type="Script" uid="uid://ck5eq28eg0lxc" path="res://Scripts/level_1.gd" id="1_du1gc"]
+[ext_resource type="Texture2D" uid="uid://cb4clp7ehmcfb" path="res://Assets/sprites/Background 1.png" id="2_uwisk"]
+[ext_resource type="Texture2D" uid="uid://bg5dchc7ativq" path="res://Assets/sprites/Mossy - TileSet.png" id="3_yqib7"]
+[ext_resource type="Texture2D" uid="uid://bilorlycre7wu" path="res://Assets/sprites/Mossy - Decorations&Hazards.png" id="4_w3eof"]
+[ext_resource type="Texture2D" uid="uid://c5lecw0rs7ptl" path="res://Assets/sprites/Square - Black.jpg" id="5_pyjyt"]
+[ext_resource type="Texture2D" uid="uid://boc8rfrcdrfp3" path="res://Assets/sprites/Mossy - Hanging Plants.png" id="6_qm4xx"]
+[ext_resource type="Texture2D" uid="uid://mkteoh078niy" path="res://Assets/sprites/BlueFlower_00000.png" id="7_kp1sm"]
+[ext_resource type="Texture2D" uid="uid://c2rg3fae6grxe" path="res://Assets/sprites/SlimeOrange_00000.png" id="8_rdfk5"]
+[ext_resource type="Script" uid="uid://cyb78xm48tqk" path="res://Scripts/game_manager.gd" id="9_jedjv"]
+[ext_resource type="PackedScene" uid="uid://jwln2o06rw6u" path="res://Scenes/Food.tscn" id="10_etuld"]
+[ext_resource type="PackedScene" uid="uid://bkfb5sq8wmpy0" path="res://Scenes/player.tscn" id="11_v1uej"]
+[ext_resource type="PackedScene" uid="uid://b6s568ie86uxe" path="res://Scenes/kill_zone.tscn" id="12_f80nq"]
+[ext_resource type="PackedScene" uid="uid://fxvkt8ib0rhd" path="res://Scenes/moving_platform.tscn" id="13_lnl7s"]
+[ext_resource type="FontFile" uid="uid://bae47tvofuu8o" path="res://Assets/fonts/PixelOperator8.ttf" id="14_kbn7v"]
+[ext_resource type="PackedScene" uid="uid://wy7teto5idtf" path="res://Scenes/exit_level.tscn" id="15_laeu0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1b78"]
-texture = ExtResource("1_4iphx")
+texture = ExtResource("2_uwisk")
 texture_region_size = Vector2i(1920, 1080)
 0:0/0 = 0
 
@@ -26,7 +26,7 @@ tile_size = Vector2i(1920, 1080)
 sources/8 = SubResource("TileSetAtlasSource_u1b78")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vly50"]
-texture = ExtResource("1_4hvuo")
+texture = ExtResource("3_yqib7")
 texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-189.03726, -216.83688, 256, -213.41318, 256, 256, -197.72104, 256)
@@ -102,7 +102,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_vly50")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4iphx"]
-texture = ExtResource("2_y4dr7")
+texture = ExtResource("4_w3eof")
 texture_region_size = Vector2i(256, 256)
 12:0/0 = 0
 13:0/0 = 0
@@ -236,7 +236,7 @@ texture_region_size = Vector2i(256, 256)
 8:4/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bs12r"]
-texture = ExtResource("4_jgkgd")
+texture = ExtResource("5_pyjyt")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 1:0/0 = 0
@@ -244,7 +244,7 @@ texture_region_size = Vector2i(256, 256)
 1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jgkgd"]
-texture = ExtResource("3_didp7")
+texture = ExtResource("6_qm4xx")
 texture_region_size = Vector2i(256, 256)
 2:0/0 = 0
 4:0/0 = 0
@@ -295,7 +295,7 @@ texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2a60c"]
-texture = ExtResource("4_didp7")
+texture = ExtResource("7_kp1sm")
 texture_region_size = Vector2i(256, 256)
 0:0/size_in_atlas = Vector2i(3, 3)
 0:0/0 = 0
@@ -308,7 +308,7 @@ sources/4 = SubResource("TileSetAtlasSource_2a60c")
 sources/1 = SubResource("TileSetAtlasSource_bs12r")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rqhku"]
-texture = ExtResource("4_2a60c")
+texture = ExtResource("8_rdfk5")
 texture_region_size = Vector2i(510, 410)
 0:0/0 = 0
 
@@ -362,7 +362,7 @@ _data = {
 size = Vector2(66, 91)
 
 [node name="LevelRoot" type="Node2D"]
-script = ExtResource("1_u1b78")
+script = ExtResource("1_du1gc")
 
 [node name="World" type="Node" parent="."]
 
@@ -389,42 +389,42 @@ tile_map_data = PackedByteArray("AAAGAAYAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_cpkqv")
 
 [node name="Game manager" type="Node" parent="World"]
-script = ExtResource("1_d1mwp")
+script = ExtResource("9_jedjv")
 
 [node name="Food" type="Node" parent="."]
 
-[node name="Food" parent="Food" instance=ExtResource("8_4iphx")]
+[node name="Food" parent="Food" instance=ExtResource("10_etuld")]
 position = Vector2(530, 438)
 
-[node name="Food2" parent="Food" instance=ExtResource("8_4iphx")]
+[node name="Food2" parent="Food" instance=ExtResource("10_etuld")]
 position = Vector2(593, 439)
 
-[node name="Food3" parent="Food" instance=ExtResource("8_4iphx")]
+[node name="Food3" parent="Food" instance=ExtResource("10_etuld")]
 position = Vector2(668, 443)
 
-[node name="Food4" parent="Food" instance=ExtResource("8_4iphx")]
+[node name="Food4" parent="Food" instance=ExtResource("10_etuld")]
 position = Vector2(1005, 443)
 
-[node name="Food5" parent="Food" instance=ExtResource("8_4iphx")]
+[node name="Food5" parent="Food" instance=ExtResource("10_etuld")]
 position = Vector2(888, 212)
 
-[node name="Food6" parent="Food" instance=ExtResource("8_4iphx")]
+[node name="Food6" parent="Food" instance=ExtResource("10_etuld")]
 position = Vector2(1139, 290)
 
-[node name="Food7" parent="Food" instance=ExtResource("8_4iphx")]
+[node name="Food7" parent="Food" instance=ExtResource("10_etuld")]
 position = Vector2(1187, 292)
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("2_16p8j")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("11_v1uej")]
 z_index = 1
 position = Vector2(164.00002, 616.00006)
 
-[node name="Kill Zone" parent="." instance=ExtResource("10_bs12r")]
+[node name="Kill Zone" parent="." instance=ExtResource("12_f80nq")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone"]
 position = Vector2(327, -43)
 shape = SubResource("WorldBoundaryShape2D_rqhku")
 
-[node name="MovingPlatform" parent="." instance=ExtResource("11_rqhku")]
+[node name="MovingPlatform" parent="." instance=ExtResource("13_lnl7s")]
 position = Vector2(1047, 504)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatform"]
@@ -441,7 +441,7 @@ offset_top = 415.0
 offset_right = 1027.0
 offset_bottom = 478.0
 theme_override_colors/font_color = Color(1, 0.61960787, 1, 1)
-theme_override_fonts/font = ExtResource("12_cpkqv")
+theme_override_fonts/font = ExtResource("14_kbn7v")
 theme_override_font_sizes/font_size = 16
 text = "Make sure to jump 
 at the right time"
@@ -452,7 +452,7 @@ offset_top = 245.0
 offset_right = 1215.0
 offset_bottom = 310.0
 theme_override_colors/font_color = Color(1, 0.78039217, 1, 1)
-theme_override_fonts/font = ExtResource("12_cpkqv")
+theme_override_fonts/font = ExtResource("14_kbn7v")
 theme_override_font_sizes/font_size = 16
 text = "Almost There.."
 
@@ -462,7 +462,7 @@ offset_top = 606.0
 offset_right = 1187.0
 offset_bottom = 661.0
 theme_override_colors/font_color = Color(1, 0.45, 0.45, 1)
-theme_override_fonts/font = ExtResource("12_cpkqv")
+theme_override_fonts/font = ExtResource("14_kbn7v")
 theme_override_font_sizes/font_size = 16
 text = "Uncharted Territory: Escape!!"
 
@@ -475,5 +475,5 @@ metadata/_edit_group_ = true
 position = Vector2(-1, -5.5)
 shape = SubResource("RectangleShape2D_u1b78")
 
-[node name="Exit Level" parent="." groups=["Player"] instance=ExtResource("15_ryjqc")]
+[node name="Exit Level" parent="." groups=["Player"] instance=ExtResource("15_laeu0")]
 position = Vector2(1095, 246)

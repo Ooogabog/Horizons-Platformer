@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://cl7kg0yljta7e"]
+[gd_scene load_steps=32 format=4 uid="uid://bs7gxvnb4jgfm"]
 
 [ext_resource type="Script" uid="uid://ck5eq28eg0lxc" path="res://Scripts/level_1.gd" id="1_0jhw5"]
 [ext_resource type="Texture2D" uid="uid://cb4clp7ehmcfb" path="res://Assets/sprites/Background 1.png" id="2_eqosv"]
@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b6s568ie86uxe" path="res://Scenes/kill_zone.tscn" id="12_t6y87"]
 [ext_resource type="PackedScene" uid="uid://fxvkt8ib0rhd" path="res://Scenes/moving_platform.tscn" id="13_keokt"]
 [ext_resource type="FontFile" uid="uid://bae47tvofuu8o" path="res://Assets/fonts/PixelOperator8.ttf" id="14_cvw5d"]
-[ext_resource type="PackedScene" uid="uid://bj8kuh3ibj2ub" path="res://Scenes/exit_level.tscn" id="15_eqosv"]
+[ext_resource type="PackedScene" uid="uid://wy7teto5idtf" path="res://Scenes/exit_level.tscn" id="15_eqosv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u1b78"]
 texture = ExtResource("2_eqosv")
@@ -415,7 +415,7 @@ position = Vector2(1139, 290)
 [node name="Food7" parent="Food" instance=ExtResource("10_pwvbg")]
 position = Vector2(1187, 292)
 
-[node name="Player" parent="." instance=ExtResource("11_bngq1")]
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("11_bngq1")]
 z_index = 1
 position = Vector2(164.00002, 616.00006)
 
@@ -476,5 +476,5 @@ metadata/_edit_group_ = true
 position = Vector2(-1, -5.5)
 shape = SubResource("RectangleShape2D_u1b78")
 
-[node name="Exit Level" parent="." instance=ExtResource("15_eqosv")]
+[node name="Exit Level" parent="." groups=["Player"] instance=ExtResource("15_eqosv")]
 position = Vector2(1088, 244)

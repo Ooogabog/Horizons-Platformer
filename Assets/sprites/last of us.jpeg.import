@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwck66hidfc56"
-path="res://.godot/imported/download (1).jpeg-d7019eed8aeab9cf44b8369f68d04f2e.ctex"
+uid="uid://cjeh44b51j6b8"
+path="res://.godot/imported/last of us.jpeg-f9b058e01695682af4df88c7ccde0c93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/download (1).jpeg"
-dest_files=["res://.godot/imported/download (1).jpeg-d7019eed8aeab9cf44b8369f68d04f2e.ctex"]
+source_file="res://Assets/sprites/last of us.jpeg"
+dest_files=["res://.godot/imported/last of us.jpeg-f9b058e01695682af4df88c7ccde0c93.ctex"]
 
 [params]
 

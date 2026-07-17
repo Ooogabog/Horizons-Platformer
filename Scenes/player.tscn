@@ -146,7 +146,7 @@ animations = [{
 radius = 5.2
 height = 15.2
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(2.5, 2.5)
 collision_layer = 2
 script = ExtResource("1_cvnsp")
