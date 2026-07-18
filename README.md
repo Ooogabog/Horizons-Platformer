@@ -9,9 +9,10 @@ The Long Walk Home is a 2D platformer about perseverance and healing, inspired b
 * Multi-level 2D platformer
 * Lighting 
 * enemy AI using RayCasting
+* Custom made Worlds (this took alot of time)
+* Music and SFX
 * Collectible items with score tracking
 * Dynamic Platforms
-* Custom made Worlds (this took alot of time)
 * Main menu
 * Respawn system with intentional respawn delay for improved game feel
 * Level progression system
