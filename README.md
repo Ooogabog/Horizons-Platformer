@@ -6,13 +6,13 @@
 The Long Walk Home is a 2D platformer about perseverance and healing, inspired by Celeste.It's Journey through a series of increasingly challenging levels filled obstacles and enemies that embody the protagonist's own fears and self-doubt. Every obstacle overcome is another step toward home, not a place, but Contentment.With little Encouraging Easter Eggs throughout the game, player is nudged to keep moving.
 
 # Highlights
-*Multi-level 2D platformer
-*enemy AI using RayCasting
-*Collectible items with score tracking
-*Dynamic Platforms
-*Custom made Worlds (this took alot of time)
-*Main menu
-*Respawn system with intentional respawn delay for improved game feel
+* Multi-level 2D platformer
+* enemy AI using RayCasting
+* Collectible items with score tracking
+* Dynamic Platforms
+* Custom made Worlds (this took alot of time)
+* Main menu
+* Respawn system with intentional respawn delay for improved game feel
 *Level progression system
 *One way Platforms for smoother player movement
 *Thematic storytelling through gameplay
